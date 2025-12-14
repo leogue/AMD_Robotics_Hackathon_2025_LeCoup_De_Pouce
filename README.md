@@ -2,7 +2,7 @@
 
 ## Team Information
 
-**Team:** *Team 11, IFT, Lucas JOURDET, Fabien PIERETTI, Leo GUERIN, Victor RANGUIN*
+**Team:** *Team 11 IFT, Lucas JOURDET, Fabien PIERETTI, Leo GUERIN, Victor RANGUIN*
 
 **Summary:** *This project's goal was to train the robotic arm so101 to recognize a specific vocal command and to give the object related to that command. The robot had to give a glove, pliers and a syringe.
 It was trained using SmolVLA and used a compartiment module to make sure to separate the different objects.*
@@ -20,7 +20,7 @@ It was trained using SmolVLA and used a compartiment module to make sure to sepa
 
 ### 3. Technical implementations
 - *Teleoperation / Dataset capture*
-    - [Watch the teleoperation video](/Training_teleoperation.mp4)
+    - https://github.com/user-attachments/assets/64bd15b0-80f5-481e-8cfc-7e078f4b13a8
 - *Training*
 - *Inference*
     - *<Image/video of inference eval>*
