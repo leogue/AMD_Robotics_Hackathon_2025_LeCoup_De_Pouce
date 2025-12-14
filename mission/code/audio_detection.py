@@ -46,15 +46,19 @@ class AudioKeywordDetector:
         self._thread = None
         self._callbacks: Dict[str, Callable] = {}
 
-    def register_keyword(self, keyword: str, callback: Callable) -> None:
+    def register_keyword(self, keyword: str, callback: Callable, aliases: list = None) -> None:
         """
         Register a callback function for a specific keyword.
 
         Args:
             keyword: The keyword to detect (case-insensitive)
             callback: Function to call when keyword is detected
+            aliases: Optional list of alternative words that trigger the same callback
         """
         self._callbacks[keyword.lower()] = callback
+        if aliases:
+            for alias in aliases:
+                self._callbacks[alias.lower()] = callback
 
     def unregister_keyword(self, keyword: str) -> None:
         """Remove a keyword callback."""
@@ -181,10 +185,11 @@ def main():
     """Demo usage of AudioKeywordDetector."""
     detector = AudioKeywordDetector()
 
-    # Example callbacks
+    # Example callbacks with aliases
     detector.register_keyword("glove", lambda: print("Action: GLOVE"))
-    detector.register_keyword("pliers", lambda: print("Action: PLIERS"))
-    detector.register_keyword("syringe", lambda: print("Action: SYRINGE"))
+    detector.register_keyword("pliers", lambda: print("Action: PLIERS"), aliases=["player", "players", "playoffs"])
+    detector.register_keyword("syringe", lambda: print("Action: SYRINGE"), aliases=["syrian", "surrender"])
+    detector.register_keyword("stop", lambda: print("Action: STOP"), aliases=["step"])
 
     try:
         detector.start(blocking=True)
