@@ -1,23 +1,22 @@
-**### Make a fork or copy of this repo and fill in your team submission details! ###**
-
-# AMD_Robotics_Hackathon_2025_[Project Name]
+# AMD_Robotics_Hackathon_2025_LeCoup_De_Pouce
 
 ## Team Information
 
-**Team:** *Your team number, name of your team, and members*
+**Team:** *Team 11, IFT, Lucas JOURDET, Fabien PIERETTI, Leo GUERIN, Victor RANGUIN*
 
-**Summary:** *A brief description of your work*
+**Summary:** *This project's goal was to train the robotic arm so101 to recognize a specific vocal command and to give the object related to that command. The robot had to give a glove, pliers and a syringe.
+It was trained using SmolVLA and used a compartiment module to make sure to separate the different objects.*
 
 *< Images or video demonstrating your project >*
 
 ## Submission Details
 
 ### 1. Mission Description
-- *Real world application of your mission*
+- *In the medical world, using a robot to hand the different tools to a surgeon appears to be safer because of the lack of mistake the model can make. The idea is to never have any physical unclean contact with the object in between the movement from the table to the surgeon's hand.*
 
 ### 2. Creativity
-- *What is novel or unique in your approach?*
-- *Innovation in design, methodology, or application*
+- *Using a robotic arm piloted by AI allows for more flexibility and adaptation from the robot to the surgeon's habits.*
+- *The innovation resides in the methodology, using an AI model to pilot the arm and in the application, replacing a human assistant in such a specific domain of application.*
 
 ### 3. Technical implementations
 - *Teleoperation / Dataset capture*
@@ -27,9 +26,9 @@
     - *<Image/video of inference eval>*
 
 ### 4. Ease of use
-- *How generalizable is your implementation across tasks or environments?*
-- *Flexibility and adaptability of the solution*
-- *Types of commands or interfaces needed to control the robot*
+- *It can work in any operating room as long as the tools are stored in similar boxes as in the original dataset.*
+- *It can adapt to different hand position.*
+- *You'll need lerobot framework and the model for vocal command recognition and the python script.*
 
 ## Additional Links
 *For example, you can provide links to:*
