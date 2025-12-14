@@ -12,11 +12,13 @@ It was trained using SmolVLA and used a compartiment module to make sure to sepa
 ## Submission Details
 
 ### 1. Mission Description
-- *In the medical world, using a robot to hand the different tools to a surgeon appears to be safer because of the lack of mistake the model can make. The idea is to never have any physical unsterilized contact with the object in between the movement from the table to the surgeon's hand.*
+- *In the medical world, using a robot to hand the different tools to a surgeon appears to be safer because of the lack of mistake the robot can make.*
+- *Using a robot also allows a better tracability of the datas and the tasks that were done during any process which is a very important neccessity in the medical field.*
+- *As an easy interface between human langage and an action, the use of this robot allows the medical staff not beeing interrupt in their critical missions and staying focus without loosing their attention in what is very critical. It's also allow them to save a lot of time in repetitive tasks.*
 
 ### 2. Creativity
 - *Using a robotic arm piloted by AI allows for more flexibility and adaptation from the robot to the surgeon's habits. The so101 is also a cheap alternative rather than big complex arms that cost a lot of money.*
-- *The innovation resides in the methodology, using an AI model to pilot the arm and in the application, replacing a human assistant in such a specific domain of application.*
+- *The innovation resides in the methodology, using an AI model to pilot the arm and in the application, replacing a human assistant in such a specific domain of application. We did the final version using voice detection, and we also played with Muselsl to control it with EEG datas.*
 
 ### 3. Technical implementations
 - *Teleoperation / Dataset capture*
@@ -24,14 +26,22 @@ It was trained using SmolVLA and used a compartiment module to make sure to sepa
 https://github.com/user-attachments/assets/64bd15b0-80f5-481e-8cfc-7e078f4b13a8
 
 - *Training*
+- *We used SmolVLA to have only one model that allow us to add a different object easily and allow us to generalise our model.*
+- *For each records of object, we define a tasks that allow us to get one of the tools.
+- *We did multiple training methods to understand the limits of the LeRobot usecase and avoid point of conflict.*
+- *For the final training, we placed our objects in a compartment and changed their position, we use LeRobot to go on top of the object we trainded, then grab it, then give it to the operator and finally go back to is sleep position.*
+
 - *Inference*
+- *We use the mike to send the command and if the world heared from the mike correspond to an object from our tools, it will grab it and give it to the operator*
+- *We use a stop command when we have all the element we want*
+- *It has a timer of 30s to give the object and has an ovveride effect, if we ask for gloves then syringe, it will change to get the syringe*
     - *<Image/video of inference eval>*
 
 ### 4. Ease of use
 - *It can work in any operating room as long as the tools are stored in similar boxes as in the original dataset.*
 - *It can adapt to different hand position.*
 - *You'll need lerobot framework and the model for vocal command recognition and the python script.*
-
+    
 ## Additional Links
 *For example, you can provide links to:*
 
