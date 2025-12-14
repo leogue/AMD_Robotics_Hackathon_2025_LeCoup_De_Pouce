@@ -12,15 +12,15 @@ It was trained using SmolVLA and used a compartiment module to make sure to sepa
 ## Submission Details
 
 ### 1. Mission Description
-- *In the medical world, using a robot to hand the different tools to a surgeon appears to be safer because of the lack of mistake the model can make. The idea is to never have any physical unclean contact with the object in between the movement from the table to the surgeon's hand.*
+- *In the medical world, using a robot to hand the different tools to a surgeon appears to be safer because of the lack of mistake the model can make. The idea is to never have any physical unsterilized contact with the object in between the movement from the table to the surgeon's hand.*
 
 ### 2. Creativity
-- *Using a robotic arm piloted by AI allows for more flexibility and adaptation from the robot to the surgeon's habits.*
+- *Using a robotic arm piloted by AI allows for more flexibility and adaptation from the robot to the surgeon's habits. The so101 is also a cheap alternative rather than big complex arms that cost a lot of money.*
 - *The innovation resides in the methodology, using an AI model to pilot the arm and in the application, replacing a human assistant in such a specific domain of application.*
 
 ### 3. Technical implementations
 - *Teleoperation / Dataset capture*
-    - *<Image/video of teleoperation or dataset capture>*
+    - [Watch the teleoperation video](/Training_teleoperation.mp4)
 - *Training*
 - *Inference*
     - *<Image/video of inference eval>*
