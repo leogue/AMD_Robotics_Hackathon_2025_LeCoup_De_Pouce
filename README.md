@@ -20,7 +20,7 @@ It was trained using SmolVLA and used a compartiment module to make sure to sepa
 
 ### 3. Technical implementations
 - *Teleoperation / Dataset capture*
-    - https://github.com/user-attachments/assets/64bd15b0-80f5-481e-8cfc-7e078f4b13a8
+    - [Teleoperation and dataset capture](https://github.com/user-attachments/assets/64bd15b0-80f5-481e-8cfc-7e078f4b13a8)
 - *Training*
 - *Inference*
     - *<Image/video of inference eval>*
